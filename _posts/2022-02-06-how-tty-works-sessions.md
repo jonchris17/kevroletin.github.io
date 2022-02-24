@@ -193,7 +193,7 @@ control". Important things are:
 
 * each process belongs to exactly one session;
 * each process belongs to exactly one process group;
-* each session might have many process groups, but most one process group might
+* each session might have many process groups but most one process group might
   be marked as a foreground process group (other process groups are considered
   being background process groups);
 * newly created processes inherit session and process group from a parent.
@@ -256,7 +256,7 @@ R+   pts/1     5031  5836  5836                   ps
 S+   pts/1     5031  5836  5837                   less
 ```
 
-Now let's return to our buggy program and use `ps` to explore the problem with
+Now let us return to our buggy program and use `ps` to explore the problem with
 job control. Remember that we've created a new `tty`, we've started a new `sh`
 process and we want `sh` to use newly created `tty`. The reason we want `sh` to
 use a newly created `tty` is because that way our tool can pretend to be an
